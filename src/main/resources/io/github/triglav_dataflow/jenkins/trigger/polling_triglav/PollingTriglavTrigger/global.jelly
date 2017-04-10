@@ -26,5 +26,20 @@
     <f:entry title="Triglav Url" field="triglavApiUrl">
       <f:textbox value="${it.triglavApiUrl}"/>
     </f:entry>
+    <f:entry title="Triglav Admin Username" field="adminUsername">
+      <f:textbox value="${it.adminUsername}"/>
+    </f:entry>
+    <f:entry title="Triglav Admin Password" field="adminPassword">
+      <f:password value="${it.adminPassword}"/>
+    </f:entry>
+    <f:entry title="Triglav Admin Api Key (Optional, Automatically Generated.)" field="adminApiKey">
+      <f:password value="${it.adminApiKey}"/>
+    </f:entry>
+    <f:validateButton
+        title="${%Test Authentication}" progress="${%Testing...}"
+        method="testAdminAuthentication" with="adminUsername,adminPassword,adminApiKey" />
+    <f:entry title="Max Job Enqueue Count" field="maxEnqueueCount">
+      <f:number value="${it.maxEnqueueCount}"/>
+    </f:entry>
   </f:section>
 </j:jelly>
